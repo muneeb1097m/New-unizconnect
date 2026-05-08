@@ -100,11 +100,19 @@
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
                             <div class="form-group">
                                 <label style="font-size: 0.75rem;">Upload CV *</label>
-                                <input type="file" required style="font-size: 0.75rem; padding: 5px;">
+                                <div class="file-upload">
+                                    <div class="file-upload-icon">📄</div>
+                                    <div class="file-upload-text" id="cv-text">Click to upload</div>
+                                    <input type="file" id="cv-input" required>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label style="font-size: 0.75rem;">Payment SS *</label>
-                                <input type="file" required style="font-size: 0.75rem; padding: 5px;">
+                                <div class="file-upload">
+                                    <div class="file-upload-icon">💳</div>
+                                    <div class="file-upload-text" id="payment-text">Click to upload</div>
+                                    <input type="file" id="payment-input" required>
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 12px;">SUBMIT & BOOK</button>

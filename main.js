@@ -73,6 +73,30 @@ cards.forEach(card => {
   });
 });
 
+// File Upload Display
+const cvInput = document.getElementById('cv-input');
+const paymentInput = document.getElementById('payment-input');
+const cvText = document.getElementById('cv-text');
+const paymentText = document.getElementById('payment-text');
+
+if (cvInput) {
+  cvInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      cvText.textContent = e.target.files[0].name;
+      cvText.style.color = 'var(--primary)';
+    }
+  });
+}
+
+if (paymentInput) {
+  paymentInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      paymentText.textContent = e.target.files[0].name;
+      paymentText.style.color = 'var(--primary)';
+    }
+  });
+}
+
 // Add shadow to nav on scroll
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
