@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umar Tariq | 1:1 Strategy Session</title>
+    <meta name="description" content="Book a 40-minute deep-dive strategy session with Umar Tariq for international admissions and scholarships.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Gradient Blobs -->
+    <div style="position: fixed; top: -20%; left: -10%; width: 60%; height: 60%; background: radial-gradient(circle, rgba(109, 40, 217, 0.12) 0%, transparent 70%); z-index: -1; filter: blur(80px); pointer-events: none; animation: float 20s infinite alternate;"></div>
+    <div style="position: fixed; bottom: -20%; right: -10%; width: 70%; height: 70%; background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%); z-index: -1; filter: blur(80px); pointer-events: none; animation: float 25s infinite alternate-reverse;"></div>
+    <div style="position: fixed; top: 30%; right: 5%; width: 40%; height: 40%; background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%); z-index: -1; filter: blur(60px); pointer-events: none; animation: float 18s infinite alternate-reverse;"></div>
+
+    <style>
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+    </style>
+
+    <!-- Header / Nav -->
+    <nav style="padding: 20px 0; position: absolute; width: 100%; z-index: 10;">
+        <div class="container">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" alt="Unizconnect Logo" style="height: 40px; width: auto; transition: transform 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 100vh; display: flex; align-items: center; padding: 120px 0 60px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+                <div style="padding-top: 40px;">
+                    <div data-reveal style="display: inline-block; padding: 6px 16px; background: rgba(109, 40, 217, 0.1); border-radius: 100px; color: var(--primary); font-weight: 600; font-size: 0.875rem; margin-bottom: 20px;">
+                        ✨ Limited Time Offer: 50% Off
+                    </div>
+                    <h1 data-reveal style="margin-bottom: 20px;">For <span style="color: var(--primary);">40 minutes</span>, you'll get my brain fully focused on <span style="background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">you.</span></h1>
+                    <p data-reveal style="margin-bottom: 30px; font-size: 1.2rem;">I will assess your profile deeply, point out your strengths and weaknesses honestly, and build a custom roadmap for your international career goals.</p>
+                    
+                    <div data-reveal style="display: grid; gap: 20px; margin-top: 40px;">
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="min-width: 40px; height: 40px; background: rgba(109, 40, 217, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">✓</div>
+                            <p style="font-size: 1rem; margin: 0;">Deep Profile Assessment & Strategy</p>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="min-width: 40px; height: 40px; background: rgba(109, 40, 217, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">✓</div>
+                            <p style="font-size: 1rem; margin: 0;">Roadmap, Strategy, and Timeline</p>
+                        </div>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <div style="min-width: 40px; height: 40px; background: rgba(109, 40, 217, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary);">✓</div>
+                            <p style="font-size: 1rem; margin: 0;">Suitability for Scholarships</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-reveal class="hero-form">
+                    <h3 style="margin-bottom: 20px; font-size: 1.25rem;">Book Your Slot Now</h3>
+                    <form id="heroSessionForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" required placeholder="john@email.com">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="tel" required placeholder="+92 ...">
+                            </div>
+                            <div class="form-group">
+                                <label>WhatsApp *</label>
+                                <input type="tel" required placeholder="+92 ...">
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                            <div class="form-group">
+                                <label>CGPA or % *</label>
+                                <input type="text" required placeholder="3.8 / 85%">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Degree *</label>
+                                <input type="text" required placeholder="BS CS">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Country & Major *</label>
+                            <input type="text" required placeholder="USA / Data Science">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px;">
+                            <div class="form-group">
+                                <label style="font-size: 0.75rem;">Upload CV *</label>
+                                <input type="file" required style="font-size: 0.75rem; padding: 5px;">
+                            </div>
+                            <div class="form-group">
+                                <label style="font-size: 0.75rem;">Payment SS *</label>
+                                <input type="file" required style="font-size: 0.75rem; padding: 5px;">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 12px;">SUBMIT & BOOK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Prop Section -->
+    <section id="what-to-expect" style="background-color: var(--bg-gray);">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <h2>Here's what that means</h2>
+                <p>No team members, no generic advice. Just me and your future.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h3>Deep Profile Assessment</h3>
+                    <p>I'll analyze your academic and professional profile from every angle to find your competitive edge.</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3>Honest Feedback</h3>
+                    <p>I'll point out your strong areas and your weak ones with brutal honesty so you know where you stand.</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3>Country Comparison</h3>
+                    <p>Comparing countries based on your goals, preferences, and chances of success in international admissions.</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                    </div>
+                    <h3>Scholarship Suitability</h3>
+                    <p>Detailed analysis of your suitability for competitive scholarships and international university admissions.</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>Roadmap & Strategy</h3>
+                    <p>Discussing a clear roadmap, strategy, and timeline tailored specifically for your situation.</p>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="width: 50px; height: 50px; background: rgba(109, 40, 217, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--primary);">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </div>
+                    <h3>All Questions Answered</h3>
+                    <p>I'll address all your big and heavy-tiny questions, leaving no stone unturned.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Section -->
+    <section>
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <h2>Not just those 40 minutes...</h2>
+                <p>If you book this session, you'll also be entitled to 3 BONUSES.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <div class="glass-card" style="border-top: 4px solid var(--primary);" data-reveal>
+                    <span style="font-weight: 800; color: var(--primary); font-size: 0.875rem; text-transform: uppercase;">Bonus 1</span>
+                    <h3 style="margin: 15px 0;">FREE Follow-Up Questions</h3>
+                    <p>After the session ends, you might realize you forgot to ask something. You don't have to pay again—just ask me follow-up questions for clarity.</p>
+                </div>
+                <div class="glass-card" style="border-top: 4px solid var(--accent);" data-reveal>
+                    <span style="font-weight: 800; color: var(--accent); font-size: 0.875rem; text-transform: uppercase;">Bonus 2</span>
+                    <h3 style="margin: 15px 0;">Custom Recap Email</h3>
+                    <p>Receive a custom written, detailed recap email covering everything we discussed. Relax during the session and revisit our chat anytime.</p>
+                </div>
+                <div class="glass-card" style="border-top: 4px solid var(--primary-light);" data-reveal>
+                    <span style="font-weight: 800; color: var(--primary-light); font-size: 0.875rem; text-transform: uppercase;">Bonus 3</span>
+                    <h3 style="margin: 15px 0;">Direct WhatsApp Access</h3>
+                    <p>Get my personal WhatsApp number. If something confuses you later or you start over-thinking, just drop me a message or voice note.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Payment Section -->
+    <section id="pricing" style="background-color: var(--bg-gray); text-align: center;">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <h2>How Much Is It For?</h2>
+                <p>An investment in your future that won't break the bank.</p>
+            </div>
+            
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto; padding: 60px;" data-reveal>
+                <div style="text-decoration: line-through; color: var(--text-light); font-size: 1.5rem; margin-bottom: 10px;">PKR 8,000</div>
+                <div style="font-size: 4rem; font-weight: 800; color: var(--primary); margin-bottom: 20px;">PKR 4,000</div>
+                <p style="margin-bottom: 40px;">For a limited time, get the 1:1 strategy session + all bonuses at 50% off.</p>
+                
+                <div style="text-align: left; background: white; padding: 30px; border-radius: 16px; border: 1px solid #e5e7eb;">
+                    <h4 style="margin-bottom: 20px; font-weight: 700;">Bank Details for Payment:</h4>
+                    <div style="margin-bottom: 12px;"><strong>Bank Name:</strong> Faysal Bank Limited</div>
+                    <div style="margin-bottom: 12px;"><strong>Account Title:</strong> UMAR TARIQ</div>
+                    <div style="margin-bottom: 12px;"><strong>Account Number:</strong> 0142007000002165</div>
+                    <div><strong>IBAN:</strong> PK63FAYS0142007000002165</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <h2>Check out some more reviews</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"Very informative, clear step by step directions. Highly recommended, answered highly subjective queries smoothly."</p>
+                    <div style="font-weight: 700;">- Saad Tariq</div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"Great info delivered well, definitely brought to light things I wasn't clear about."</p>
+                    <div style="font-weight: 700;">- Noor Ul Ain</div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"It was very helpful for me as it cleared a lot of confusions I had previously."</p>
+                    <div style="font-weight: 700;">- M. Muneeb</div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"It was quite well structured. You gave a lot of insights which clarified my mind. It was a well spent time."</p>
+                    <div style="font-weight: 700;">- Haris Yasin</div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"Umar bro is doing a great job. Will definitely refer to others who are looking for guidance regarding MS abroad."</p>
+                    <div style="font-weight: 700;">- Syed Talha</div>
+                </div>
+                <div class="glass-card" data-reveal>
+                    <div style="color: #fbbf24; margin-bottom: 15px;">★★★★★</div>
+                    <p style="font-style: italic; margin-bottom: 20px;">"The session was highly informative and cleared a lot of ambiguities I had previously."</p>
+                    <div style="font-weight: 700;">- Ahmed Ali</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 60px 0; border-top: 1px solid #e5e7eb; text-align: center;">
+        <div class="container">
+            <div style="margin-bottom: 20px;">
+                <img src="logo.png" alt="Unizconnect Logo" style="height: 40px; width: auto;">
+            </div>
+            <p style="margin-bottom: 20px;">Building futures, one strategy at a time.</p>
+            <div style="color: var(--text-light); font-size: 0.875rem;">&copy; 2024 Umar Tariq. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
