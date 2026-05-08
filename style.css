@@ -192,6 +192,36 @@ section {
   transform: scale(1.05);
 }
 
+.section-dark {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--accent) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-dark .section-title h2 {
+  -webkit-text-fill-color: white;
+  background: none;
+}
+
+.section-dark p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-dark .glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.section-dark .glass-card h3 {
+  color: white;
+}
+
+.section-dark .glass-card p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 /* Form Styling */
 .form-group {
   margin-bottom: 24px;
