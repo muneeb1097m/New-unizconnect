@@ -31,6 +31,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Form Submission Handling
 const heroForm = document.getElementById('heroSessionForm');
+const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/B1KkpgABfPleeIPoYy8x/webhook-trigger/bJivOdKvcs65nQRqpR2B';
 
 if (heroForm) {
   heroForm.addEventListener('submit', async (e) => {
@@ -41,18 +42,45 @@ if (heroForm) {
     
     // Disable button and show loading state
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Processing...';
+    submitBtn.textContent = 'Sending...';
     
-    // Simulate API call
+    // Create FormData object
+    const formData = new FormData();
+    
+    // Add text fields
+    const inputs = heroForm.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+    inputs.forEach(input => {
+      // Get the label text for the key name
+      const label = input.previousElementSibling ? input.previousElementSibling.textContent.replace(' *', '') : input.placeholder;
+      formData.append(label, input.value);
+    });
+    
+    // Add files
+    if (cvInput.files.length > 0) {
+      formData.append('CV', cvInput.files[0]);
+    }
+    if (paymentInput.files.length > 0) {
+      formData.append('Payment Screenshot', paymentInput.files[0]);
+    }
+    
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Use no-cors if the webhook doesn't support CORS, but FormData might be limited
+      });
       
-      // Show success message
-      alert('Thank you! Your booking request has been submitted. Our team will verify your payment and contact you shortly.');
+      // Note: with no-cors, we can't check response.ok, so we assume success if no error is thrown
+      alert('Success! Your booking request has been sent. We will contact you soon.');
       heroForm.reset();
+      cvText.textContent = 'Click to upload';
+      paymentText.textContent = 'Click to upload';
+      cvText.style.color = 'var(--text-muted)';
+      paymentText.style.color = 'var(--text-muted)';
       
     } catch (error) {
-      alert('Something went wrong. Please try again or contact support.');
+      console.error('Webhook Error:', error);
+      alert('There was an issue sending your request. Please try again or contact us directly.');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalBtnText;
